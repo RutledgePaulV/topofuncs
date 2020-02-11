@@ -53,7 +53,7 @@
                                            (take 2 (cycle (:path p#)))
                                            (:path p#))
                                          (partition 2 1)
-                                         (map f-part#)
+                                         (map f#)
                                          (reduce pipestream-combinator)))
                                   (->> (top/shortest-paths g# (fn [a# b#] (get w# [a# b#])))
                                        (miss/filter-vals (comp pos? :distance))))]

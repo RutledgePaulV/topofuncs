@@ -14,7 +14,11 @@
   {:name  :authentication
    :after #{:query-params :form-params}}
   [handler]
-  (fn [request] (handler (assoc request :auth (select-keys request [:qp :fp])))))
+  (fn [request]
+    (if (or (contains? (:qp request) :authenticated)
+            (contains? (:fp request) :authenticated))
+      (handler request)
+      {:status 401 :body "Unauthorized!"})))
 
 (tm/def-middleware-graph-impl middleware
   {:name :form-params}
