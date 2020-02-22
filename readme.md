@@ -1,8 +1,19 @@
 A collection of macros and combinators for defining composable function graphs. Graph
 traversals are precomputed during macroexpansion so there is no runtime performance penalty.
 
+---
 
-Transcoding - for file format conversions.
+### Install
+
+```clojure 
+[org.clojars.rutledgepaulv/topofuncs "0.1.0"]
+```
+
+---
+
+### Transcoding 
+
+For composing byte conversions.
 
 ```clojure
 (require '[topofuncs.transcoding :as tf])
@@ -25,8 +36,11 @@ Transcoding - for file format conversions.
 (pdf->jpeg input-stream output-stream {})
 ```
 
+---
 
-Middleware - for dependent middleware.
+### Middleware 
+
+For composing dependent middleware.
 
 ```clojure 
 (require '[topofuncs.middleware :as tm])
