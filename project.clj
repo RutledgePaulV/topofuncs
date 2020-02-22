@@ -1,4 +1,4 @@
-(defproject org.clojars.rutledgepaulv/topofuncs "0.1.0-SNAPSHOT"
+(defproject org.clojars.rutledgepaulv/topofuncs "0.1.0"
 
   :description
   "Useful function compositions from graphs."
