@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.rutledgepaulv/topofuncs.svg)](https://clojars.org/org.clojars.rutledgepaulv/topofuncs)
+
 A collection of macros and combinators for defining composable function graphs. Graph
 traversals are precomputed during macroexpansion so there is no runtime performance penalty.
 
